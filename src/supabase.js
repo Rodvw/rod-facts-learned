@@ -6,3 +6,4 @@ const supabaseKey =
 const supabase = createClient(supabaseUrl, supabaseKey);
 
 export default supabase;
+// code de supabase initializing js, con la api key no oculta

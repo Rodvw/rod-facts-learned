@@ -13,23 +13,10 @@ const CATEGORIES = [
 	{ name: 'news', color: '#8b5cf6' },
 ];
 
-// function Counter() {
-// 	const [count, setCount] = useState(0);
-
-// 	return (
-// 		<div>
-// 			<span style={{ fontSize: '2rem' }}>{count}</span>
-// 			<button className="btn btn-large" onClick={() => setCount((c) => c + 1)}>
-// 				+1
-// 			</button>
-// 		</div>
-// 	);
-// }
-
 function App() {
 	// 1. define state variable
 	const [showForm, setShowForm] = useState(false); // render del form como state, parte falso pero si presionas boton, lo renderiza
-	const [facts, setFacts] = useState([]); // estado para hacer los facts, donde tiene estado inicial para partir lel factlist, pero ademas ell setfacts para dibuajr nuevos, es una funcion del form.
+	const [facts, setFacts] = useState([]); // estado para hacer los facts, donde tiene estado inicial para partir lel factlist, pero ademas el setfacts para dibujar nuevos, es una funcion del form.
 	const [isLoading, setIsLoading] = useState(true); // estado para el loader
 	const [currentCategory, setCurrentCategory] = useState('all'); // estado para las categorias y su uso en el filtro, cambia con los onclick
 
@@ -244,7 +231,7 @@ function FactList({ facts, setFacts }) {
 		<section>
 			<ul className="facts-list">
 				{facts.map((fact) => (
-					<Fact key={fact.id} fact={fact} setFacts={setFacts} /> // aqui pasamso la key y el objeto a child component
+					<Fact key={fact.id} fact={fact} setFacts={setFacts} /> // aqui pasamos la key y el objeto a child component
 				))}
 			</ul>
 			<p>There are {facts.length} facts in the database. Add your own!</p>
